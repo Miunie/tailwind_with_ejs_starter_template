@@ -1,0 +1,26 @@
+<html lang="en">
+
+<%- include('./partials/head.ejs') %>
+
+<body>
+    <%- include('./partials/nav.ejs') %>
+
+    <div class="add-record content-wrapper">
+        <form class="add-form">
+            <label for="map">Map:</label>
+            <input type="text" id="map" required>
+            <label for="time">Time:</label>
+            <input type="text" id="time" required>
+            <label for="steamid">STEAM_ID:</label>
+            <input type="text" id="steamid" required>
+            <label for="server">Server:</label>
+            <input type="text" id="server" required>
+            <button>Submit</button>
+        </form>
+    </div>
+
+    <div></div>
+
+</body>
+
+</html>

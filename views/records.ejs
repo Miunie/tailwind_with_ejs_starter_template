@@ -1,0 +1,41 @@
+<html lang="en">
+<%- include('./partials/head.ejs') %>
+
+<body>
+    <%- include('./partials/nav.ejs') %>
+
+    <% if (records.length > 0) { %>
+    <table class="recordstable">
+        <thead>
+            <tr class="records-table-head">
+                <th>Map</th>
+                <th>Time</th>
+                <th>Style</th>
+                <th>Player</th>
+                <th>Server</th>
+            </tr>
+        </thead>
+        <tbody id="recordstable">
+            <% records.forEach(record => { %>
+
+            <tr class="record-row">
+                <td><%= record.map %></td>
+                <td class="timecol"><%= record.time %></td>
+                <td><%= record.style %></td>
+                <td><%= record.player %></td>
+                <td><%= record.server %></td>
+            </tr>
+            <% }) %>
+        </tbody>
+    </table>
+    <% } else { %>
+    <h2>No records here.</h2>
+    <% } %>
+
+    <div class="content-wrapper">
+        <h2>Records</h2>
+    </div>
+
+</body>
+
+</html>
